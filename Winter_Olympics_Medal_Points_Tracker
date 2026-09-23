@@ -1,0 +1,51 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    // 1. Setup constants for medal point values
+    const int GOLD_POINTS = 5;
+    const int SILVER_POINTS = 3;
+    const int BRONZE_POINTS = 1;
+
+    // 2. Declare variables to store medal counts
+    int goldMedals = 0;
+    int silverMedals = 0;
+    int bronzeMedals = 0;
+
+    // 3. Prompt user and get input for each medal type
+    cout << "Enter the number of Gold medals won: ";
+    cin >> goldMedals;
+
+    cout << "Enter the number of Silver medals won: ";
+    cin >> silverMedals;
+
+    cout << "Enter the number of Bronze medals won: ";
+    cin >> bronzeMedals;
+
+    // 4. Calculate point totals using multiplication and increment tracking
+    int goldScore = goldMedals * GOLD_POINTS;
+    int silverScore = silverMedals * SILVER_POINTS;
+    int bronzeScore = bronzeMedals * BRONZE_POINTS;
+
+    // Calculate overall total points
+    int totalPoints = goldScore + silverScore + bronzeScore;
+
+    // Keep track of total medals won
+    int totalMedals = 0;
+    totalMedals += goldMedals;
+    totalMedals += silverMedals;
+    totalMedals += bronzeMedals;
+
+    // 5. Output the calculated results
+    cout << "\n-----------------------------------" << endl;
+    cout << "Medal Points Summary:" << endl;
+    cout << "Gold Medals:   " << goldMedals << " (" << goldScore << " pts)" << endl;
+    cout << "Silver Medals: " << silverMedals << " (" << silverScore << " pts)" << endl;
+    cout << "Bronze Medals: " << bronzeMedals << " (" << bronzeScore << " pts)" << endl;
+    cout << "Total Medals: " << totalMedals << endl;
+    cout << "Total Points: " << totalPoints << " pts" << endl;
+    cout << "-----------------------------------" << endl;
+
+    return 0;
+}
